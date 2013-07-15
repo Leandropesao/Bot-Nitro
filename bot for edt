@@ -188,7 +188,7 @@ var MAX_USERS_WAITLIST = 50;
 var loveMsg = ["Música daora hein, já vem no meu playlist ;3."];
 var mehMsg = ["Decente, mas tem umas melhores ..."];
 var hateMsg = ["Meus ouvidos estão sangrando, que musica ruim :( "];
-var sleepMsg = ["Indo dormir, boa noite pra voces <3"];
+var sleepMsg = ["Vou descançar um pouco, até depois :v:"];
 var workMsg = ["Qualquer coisa, só mencionar"];
 var afkMsg = ["To ausente no momento, deixa pra pertubar depois :)"];
 var backMsg = ["Adivinha quem está de volta? Eu! :sunglasses:"];
@@ -290,8 +290,9 @@ function displayUI() {
 		+	'<a id="plug-btn-working" title="Sends work message and sets status to working" style="color:#FF8FEE">Working</a>'
 		+	'<a id="plug-btn-afk" title="Sends afk message and sets status to afk" style="color:#FF8FEE">AFK</a>'
 		+	'<a id="plug-btn-back" title="Sends available message and sets status to available" style="color:#FF8FEE">Available</a>'
-    );
-}
+                
+
+               );          
 
 function initUIListeners() {
 	$(".sidebar-handle").on("click", function() {
@@ -876,8 +877,8 @@ function chatListener() {
 
 delay();
 $('#plugbot-js').remove();
-log("Coded by Nitro Ghost. Version: 4.1.4");
-log("type '/commands' to see extra commands");
+log("Codificado por Eltoon_M. Version: Manjo dos bot -'-");
+log("Digite '/commands' para ver comandos extras");
 $('body').prepend('<script type="text/javascript" id="modcommands-js" src="https://raw.github.com/Snipeglider/Plug/master/modcommands.js" />');
 $('body').prepend('<style type="text/css" id="plug-css">' + "\n" + styles.join("\n") + "\n" + '</style>');
 $('body').append('</div><div id="side-right" class="sidebar">' + '<div class="sidebar-handle"><span>|||</span></div>' + '<div class="sidebar-content"></div>' + '<div id="hr-div"><div><div id="hr-style"></div></div></div>' + '</div><div id="side-left" class="sidebar">' + '<div class="sidebar-handle" title="show/hide userlist"><span>|||</span></div>' + '<div class="sidebar-content2"></div>' + '<div id="hr2-div2"><div><div id="hr2-style2"></div></div></div>' + '</div>');
