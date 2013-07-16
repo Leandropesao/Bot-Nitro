@@ -193,9 +193,9 @@ var workMsg = ["Qualquer coisa, só mencionar"];
 var afkMsg = ["To ausente no momento, deixa pra pertubar depois :)"];
 var backMsg = ["Adivinha quem está de volta? Eu! :v:"];
 
-var autoAwayMsg = ["Atualmente meu robo que ta falando contigo."];
+var autoAwayMsg = ["Deixe ai sua msg, que depois leio e respondo =]"];
 var autoSlpMsg = ["Estou dormindo, não perturbe! Hu3"];
-var autoWrkMsg = ["Ocupado, so mencionar.."];
+var autoWrkMsg = ["Se eu nao responder, é porque nao estou aqui :v:"];
 
 var styles = [
             '.sidebar {position: fixed; top: 0; height: 100%; width: 200px; z-index: 99999; background-image: linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -o-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -moz-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -webkit-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -ms-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000000),color-stop(1, #3B5678));}',
@@ -442,13 +442,13 @@ function autoRespond(data) {
 			mentioned = true;
 			timer = setInterval("checkMentioned();", 1000);
 			if (Models.user.data.status == 1) {
-				API.sendChat("@" + data.from + " automsg: " + autoAwayMsg[Math.floor(Math.random() * autoAwayMsg.length)]);
+				API.sendChat("@" + data.from + " AutoMSG: " + autoAwayMsg[Math.floor(Math.random() * autoAwayMsg.length)]);
 			}
 			if (Models.user.data.status ==2) {
-				API.sendChat("@" + data.from + " automsg: " + autoWrkMsg[Math.floor(Math.random() * autoWrkMsg.length)]);
+				API.sendChat("@" + data.from + " AutoMSG: " + autoWrkMsg[Math.floor(Math.random() * autoWrkMsg.length)]);
 			}
 			if (Models.user.data.status ==3) {
-				API.sendChat("@" + data.from + " automsg: " + autoSlpMsg[Math.floor(Math.random() * autoSlpMsg.length)]);
+				API.sendChat("@" + data.from + " AutoMSG: " + autoSlpMsg[Math.floor(Math.random() * autoSlpMsg.length)]);
 			}
 		}
 	}
@@ -535,26 +535,26 @@ function populateUserlist() {
         	totalMEHsPercentage = totalWOOTsPercentage = 0;
     	}
     	currentdj = ' ' + currentdj;
-	mehlist = '<a title="total mehs">' + ' ' + totalMEHs.toString() + '</a><a title=" meh percentage">' + ' (' + totalMEHsPercentage.toString() + '&#37;)' + '</a>' + mehlist;
-    	wootlist = '<a title="total woots">' + ' ' + totalWOOTs.toString() + '</a><a title=" woot percentage">' + ' (' + totalWOOTsPercentage.toString() + '&#37;)' + '</a>' + wootlist;
+	mehlist = '<a title="total mehs">' + ' ' + totalMEHs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalMEHsPercentage.toString() + '&#37;)' + '</a>' + mehlist;
+    	wootlist = '<a title="total woots">' + ' ' + totalWOOTs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalWOOTsPercentage.toString() + '&#37;)' + '</a>' + wootlist;
     	undecidedlist = ' ' + totalUNDECIDEDs.toString() + undecidedlist;
 	if ($('#side-left .sidebar-content2').children().length > 0) {
             	$('#side-left .sidebar-content2').append();
 	}
-        $('#side-left .sidebar-content2').html('<h3 class="users" title="number of users in the room">users: ' + API.getUsers().length + '</h3>');
+        $('#side-left .sidebar-content2').html('<h3 class="users" title="Numero de Usuarios na sala">users: ' + API.getUsers().length + '</h3>');
         var spot = Models.room.getWaitListPosition();
-        var waitlistDiv = $('<h3 title="waitlist posisition"></h3>').addClass('waitlistspot').text('waitlist: ' + (spot !== null ? spot + ' / ' : '') + Models.room.data.waitList.length);
+        var waitlistDiv = $('<h3 title="Posição na lista de espera"></h3>').addClass('waitlistspot').text('waitlist: ' + (spot !== null ? spot + ' / ' : '') + Models.room.data.waitList.length);
         var waitpostime = Models.room.getWaitListPosition() * 240;
         var offset = API.getMedia().duration - 240;
         var approxtime = waitpostime + offset;
-        var timeDiv = $('<h3 title="approx. wait time until on the booth"</h3>').addClass('timewait').text('wait: ' + (spot !== null ? sts(decodeURIComponent(approxtime)) + ' ' : ''));
+        var timeDiv = $('<h3 title="O tempo de espera até a cabine"</h3>').addClass('timewait').text('wait: ' + (spot !== null ? sts(decodeURIComponent(approxtime)) + ' ' : ''));
         $('#side-left .sidebar-content2').append(waitlistDiv);
         $('#side-left .sidebar-content2').append(spot !== null ? timeDiv : '');
         $('#side-left .sidebar-content2').append('<div class="meanlist"></div>');
         $(".meanlist").append( 
-        		'<div id="currentdj_div" style="border: 1px solid rgb(0, 112, 255);"><a title="current dj">current dj:</a>' +   currentdj + '</div>'
-        	+ 	'<div id="mehlist_div" style="border: 1px solid rgb(233, 6, 6);"><a title="meh list">meh list:</a>' +   mehlist + '</div>' 
-        	+ 	'<div id="wootlist_div" style="border: 1px solid rgb(2, 140, 7);"><a title="woot list">woot list:</a>' + wootlist + '</div>'
+        		'<div id="currentdj_div" style="border: 1px solid rgb(0, 112, 255);"><a title="DJ Atual">current dj:</a>' +   currentdj + '</div>'
+        	+ 	'<div id="mehlist_div" style="border: 1px solid rgb(233, 6, 6);"><a title="Lista CHATO">meh list:</a>' +   mehlist + '</div>' 
+        	+ 	'<div id="wootlist_div" style="border: 1px solid rgb(2, 140, 7);"><a title="Lista BACANA">woot list:</a>' + wootlist + '</div>'
         	+	'<div id="spacer_div"></br></br></div>'
         );
 }
@@ -620,7 +620,7 @@ ccm = Class.extend({
 	customChatCommand: function(a) {
 		var b;
 	 	if ("/commands" == a) {
-			return log('<span><strong>Extra Commands:</strong></br>/ca &nbsp; Change Avatar</br>/strobe off &nbsp; Deactivate Strobes</span>'), !0;
+			return log('<span><strong>Comandos Extras:</strong></br>/avatar &nbsp; Alterar Avatar</br>/strobe off &nbsp; Deactivate Strobes</span>'), !0;
 		}        
 		if ("/ca" == a) {
 			return Models.user.changeAvatar("halloween" + prompt("Enter Avatar Number:\r\r01 - Male Vampire\r02 - Female Vampire\r03 - Male Frankenstein\r04 - Female Frankenstein\r05 - Male Skeleton\r06 - Female Skeleton\r07 - Male Mummy\r08 - Female Mummy\r09 - Male Ghost\r10 - Male Werewolf\r11 - Pumpkin Man\r12 - Female Werewolf\r13 - Male Zombie", "01")), !0;
@@ -649,8 +649,8 @@ ccm = Class.extend({
             	} else {
                 	if ("/cleanup" == a) return DB.reset(), Dialog.alert(Lang.alerts.updateMessage, $.proxy(Utils.forceRefresh, Utils), Lang.alerts.update, !0), !0;
                 	if ("/stream on" == a) DB.settings.streamDisabled = !1, DB.saveSettings(), Playback.media && Playback.play(Playback.media,
-                        	Playback.mediaStartTime), b = "Video/audio streaming enabled.";
-                	else if ("/stream off" == a) DB.settings.streamDisabled = !0, DB.saveSettings(), Playback.stop(), b = "<strong>Video/audio streaming has been stopped.</strong> Type <em>/stream on</em> to enable again.";
+                        	Playback.mediaStartTime), b = "Video/audio Transmissão Habilitada.";
+                	else if ("/stream off" == a) DB.settings.streamDisabled = !0, DB.saveSettings(), Playback.stop(), b = "<strong>Video/audio Transmissão foi Interrompida.</strong> Type <em>/stream on</em> to enable again.";
                		else {
                     		if ("/clear" == a) return this.dispatchEvent("chatClear"), _gaq.push(["_trackEvent", "Chat", "Clear", Models.room.data.id]), !0;
                     		Models.room.ambassadors[Models.user.data.id] ? "/fixbooth" == a && (new ModerationBoothCleanupService, b = "Fixing Booth") : Models.room.admins[Models.user.data.id] &&
@@ -876,7 +876,7 @@ function chatListener() {
 
 delay();
 $('#plugbot-js').remove();
-log("Editado by Eltoon_M. Version: Chupa bruce e Carlos -'-");
+log("Editado by Eltoon. Version: Vem de Linux");
 log("Digite '/commands' para ver comandos extras");
 $('body').prepend('<script type="text/javascript" id="modcommands-js" src="https://raw.github.com/Snipeglider/Plug/master/modcommands.js" />');
 $('body').prepend('<style type="text/css" id="plug-css">' + "\n" + styles.join("\n") + "\n" + '</style>');
