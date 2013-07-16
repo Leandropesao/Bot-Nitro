@@ -185,13 +185,13 @@ var COOKIE_AUDIENCE = 'audience';
 var COOKIE_LEFT = 'left';
 var MAX_USERS_WAITLIST = 50;
 
-var loveMsg = ["Música daora hein, já vem no meu playlist ;3."];
+var loveMsg = ["Música daora hein, vou até adicionar no meu playlist :ok_hand: ."];
 var mehMsg = ["Decente, mas tem umas melhores ..."];
 var hateMsg = ["Meus ouvidos estão sangrando, que musica ruim :( "];
-var sleepMsg = ["Vou descançar um pouco, volto mais tarde."];
+var sleepMsg = ["Vou descansar um pouco, volto mais tarde."];
 var workMsg = ["Qualquer coisa, só mencionar"];
 var afkMsg = ["To ausente no momento, deixa pra pertubar depois :)"];
-var backMsg = ["Adivinha quem está de volta? Eu! :yum:"];
+var backMsg = ["Adivinha quem está de volta? Eu! :v:"];
 
 var autoAwayMsg = ["Atualmente meu robo que ta falando contigo."];
 var autoSlpMsg = ["Estou dormindo, não perturbe! Hu3"];
