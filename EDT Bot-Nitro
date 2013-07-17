@@ -94,9 +94,9 @@ function addGlobalStyle(css){
 //
 //addGlobalStyle('#button-lobby {background-image: max-height:0px;max-width:0px;}');
 //
-//addGlobalStyle('#button-vote-positive {background-image: url("http://cloud.github.com/downloads/Punkred/DnBplug/ButtonVotePositive.png") ;}');
+//addGlobalStyle('#button-vote-positive {background-image: url("") ;}');
 //
-//addGlobalStyle('#button-vote-negative {background-image: url("http://cloud.github.com/downloads/Punkred/DnBplug/ButtonVoteNegative.png")!important ;}');
+//addGlobalStyle('#button-vote-negative {background-image: url("")!important ;}');
 //
 //addGlobalStyle('#logo {background-image: url("");min-height:33px;min-width:131px;}');
 //
@@ -133,10 +133,10 @@ var words = {
 "Points" : "Ratings!",
 "Now Playing" : "Now Spinning!",
 "Time Remaining" : "Time Remaining!",
-"Volume" : "Pump the Volume!",
+"Volume" : "Ajustar Volume!",
 "Current DJ" : "Disk Jockey",
 "Crowd Response" : "Crowd Reaction!",
-"Fans":"Ballas!"};
+"Fans":"MEUS FÃS"};
 
 String.prototype.prepareRegex = function() {
 return this.replace(/([\[\]\^\&\$\.\(\)\?\/\\\+\{\}\|])/g, "\\$1");
@@ -189,13 +189,13 @@ var loveMsg = ["Música daora hein, vou até adicionar no meu playlist :ok_hand:
 var mehMsg = ["Decente, mas tem umas melhores ..."];
 var hateMsg = ["Meus ouvidos estão sangrando, que musica ruim :( "];
 var sleepMsg = ["Vou descansar um pouco, volto mais tarde."];
-var workMsg = ["Qualquer coisa, só mencionar"];
-var afkMsg = ["To ausente no momento, deixa pra pertubar depois :)"];
-var backMsg = ["Adivinha quem está de volta? Eu! :v:"];
+var workMsg = ["Qualquer coisa, só mencionar."];
+var afkMsg = ["To ausente no momento, ou seja, nao to aqui :)"];
+var backMsg = ["Aeee volteei para a sua alegria :v:"];
 
 var autoAwayMsg = ["Deixe ai sua msg, que depois leio e respondo =]"];
 var autoSlpMsg = ["Estou dormindo, não perturbe! Hu3"];
-var autoWrkMsg = ["Se eu nao responder, é porque nao estou aqui :v:"];
+var autoWrkMsg = ["No momento estou muito ocupado, na volta te respondo. :v:"];
 
 var styles = [
             '.sidebar {position: fixed; top: 0; height: 100%; width: 200px; z-index: 99999; background-image: linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -o-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -moz-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -webkit-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -ms-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000000),color-stop(1, #3B5678));}',
@@ -274,22 +274,22 @@ function displayUI() {
     	var colorEmotes = emotes ? '#3FFF00' : '#ED1C24';
     	var colorAudience = audience ? '#3FFF00' : '#ED1C24';
 	$('#side-right .sidebar-content').append(
-			'<a title="Commands" style="color:#FFFFF">Commands:</a>'
-		+	'<a id="plug-btn-woot" title="Toggle AutoWoot" style="color:' + colorWoot + '">AutoWoot</a>'
-		+ 	'<a id="plug-btn-queue" title="Toggle AutoQueue" style="color:' + colorQueue + '">AutoQueue</a>'
-		+ 	'<a id="plug-btn-stream" title="Toggle Video Stream" style="color:' + colorStream + '">Video Streaming</a>'
-		+ 	'<a id="plug-btn-hidevideo" title="Toggle Video" style="color:' + colorVideo + '">Hide Video</a>'
+			'<a title="Comandos" style="color:#FFFFF">Comandos:</a>'
+		+	'<a id="plug-btn-woot" title="Toggle AutoWoot" style="color:' + colorWoot + '">Bacana</a>'
+		+ 	'<a id="plug-btn-queue" title="Toggle AutoQueue" style="color:' + colorQueue + '">Entrar na Fila</a>'
+		+ 	'<a id="plug-btn-stream" title="Toggle Video Stream" style="color:' + colorStream + '">Video Transmissao</a>'
+		+ 	'<a id="plug-btn-hidevideo" title="Toggle Video" style="color:' + colorVideo + '">Ocultar Vídeo</a>'
 		+	'<a id="plug-btn-emotes" title="Toggle Emoticons" style="color:' + colorEmotes + '">Emoticons</a>'
 		+	'<a id="plug-btn-audience" title="Toggle Audience" style="color:' + colorAudience + '">Audience</a>'
-		+	'<a title="Comment on song" style="color:#FFFFF">Comment on song:</a>'
-		+	'<a id="plug-btn-lovesong" title="Sends love song message" style="color:#FF8C00">Love this song!</a>'
-		+	'<a id="plug-btn-mehsong" title="Sends meh song message" style="color:#FF8C00">Not fan of song!</a>'
-		+	'<a id="plug-btn-hatesong" title="Sends hate song message" style="color:#FF8C00">Hates this song!</a>'
+		+	'<a title="Comente sobre a Musica" style="color:#FFFFF">Opinioes sobre a Musica:</a>'
+		+	'<a id="plug-btn-lovesong" title="Envia MSG de Gostei" style="color:#FF8C00">Gostei da Musica!</a>'
+		+	'<a id="plug-btn-mehsong" title="Envia MSF de Chato" style="color:#FF8C00">Nao gostei da Musica!</a>'
+		+	'<a id="plug-btn-hatesong" title="Envia mensagem de ódio " style="color:#FF8C00">Odiei a Musica!</a>'
 		+	'<a title="Changes your status" style="color:#FFFFF">Status:</a>'
-		+	'<a id="plug-btn-sleeping" title="Sends sleep message and sets status to sleeping" style="color:#FF8FEE">Sleeping</a>'
-		+	'<a id="plug-btn-working" title="Sends work message and sets status to working" style="color:#FF8FEE">Working</a>'
-		+	'<a id="plug-btn-afk" title="Sends afk message and sets status to afk" style="color:#FF8FEE">AFK</a>'
-		+	'<a id="plug-btn-back" title="Sends available message and sets status to available" style="color:#FF8FEE">Available</a>'
+		+	'<a id="plug-btn-sleeping" title="Envia mensagem de sono e define estado a Adormecido" style="color:#FF8FEE">Adormecido</a>'
+		+	'<a id="plug-btn-working" title="Envia mensagem de ocupado e define estado a Ocupado" style="color:#FF8FEE">Ocupado</a>'
+		+	'<a id="plug-btn-afk" title="Envia mensagem ausente e define estado de Ausente" style="color:#FF8FEE">Ausente</a>'
+		+	'<a id="plug-btn-back" title="Envia mensagem disponível e define status para Disponível" style="color:#FF8FEE">Disponivel</a>'
     );
 }
 
