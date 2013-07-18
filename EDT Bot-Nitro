@@ -108,7 +108,7 @@ addGlobalStyle('#room-wheel {background-image: max-height:0px;max-width:0px;}');
 //
 //addGlobalStyle('#user-fans {background-image: url("");maxheight:25px;max-width:25px;}');
 //
-addGlobalStyle('html{background: url("http://i.imgur.com/hb1kZvD.jpg") no-repeat scroll center top #000000;');
+addGlobalStyle('html{background: url("http://i.imgur.com/2ckhV.jpg") no-repeat scroll center top #000000;');
 //
 //addGlobalStyle('#button-dj-play.button-dj {background-image: url("")!important;}');
 //
@@ -190,10 +190,10 @@ var mehMsg = ["Decente, mas tem umas melhores ..."];
 var hateMsg = ["Meus ouvidos estão sangrando, que musica ruim :( "];
 var sleepMsg = ["Vou descansar um pouco, volto mais tarde."];
 var workMsg = ["Qualquer coisa, só mencionar."];
-var afkMsg = ["To ausente no momento, ou seja, nao to aqui :)"];
-var backMsg = ["Aeee volteei para a sua alegria :v:"];
+var afkMsg = ["Me ausentando da bagaça, até depois!"];
+var backMsg = ["To de volta galera :v:"];
 
-var autoAwayMsg = ["Deixe ai sua msg, que depois leio e respondo =]"];
+var autoAwayMsg = ["Nao posso responder no momento, na volta falo cntg =]"];
 var autoSlpMsg = ["Estou dormindo, não perturbe! Hu3"];
 var autoWrkMsg = ["No momento estou muito ocupado, na volta te respondo. :v:"];
 
@@ -535,8 +535,8 @@ function populateUserlist() {
         	totalMEHsPercentage = totalWOOTsPercentage = 0;
     	}
     	currentdj = ' ' + currentdj;
-	mehlist = '<a title="total mehs">' + ' ' + totalMEHs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalMEHsPercentage.toString() + '&#37;)' + '</a>' + mehlist;
-    	wootlist = '<a title="total woots">' + ' ' + totalWOOTs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalWOOTsPercentage.toString() + '&#37;)' + '</a>' + wootlist;
+	mehlist = '<a title="total mehs">' + ' ' + totalMEHs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalMEHsPercentage.toString() + '&#37;)' + '</a>' + Lista Chato;
+    	wootlist = '<a title="total woots">' + ' ' + totalWOOTs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalWOOTsPercentage.toString() + '&#37;)' + '</a>' + Lista Bacana;
     	undecidedlist = ' ' + totalUNDECIDEDs.toString() + undecidedlist;
 	if ($('#side-left .sidebar-content2').children().length > 0) {
             	$('#side-left .sidebar-content2').append();
@@ -552,9 +552,9 @@ function populateUserlist() {
         $('#side-left .sidebar-content2').append(spot !== null ? timeDiv : '');
         $('#side-left .sidebar-content2').append('<div class="meanlist"></div>');
         $(".meanlist").append( 
-        		'<div id="currentdj_div" style="border: 1px solid rgb(0, 112, 255);"><a title="DJ Atual">current dj:</a>' +   currentdj + '</div>'
-        	+ 	'<div id="mehlist_div" style="border: 1px solid rgb(233, 6, 6);"><a title="Lista CHATO">meh list:</a>' +   mehlist + '</div>' 
-        	+ 	'<div id="wootlist_div" style="border: 1px solid rgb(2, 140, 7);"><a title="Lista BACANA">woot list:</a>' + wootlist + '</div>'
+        		'<div id="currentdj_div" style="border: 1px solid rgb(0, 112, 255);"><a title="DJ Atual">current dj:</a>' +   DJ ATUAL + '</div>'
+        	+ 	'<div id="mehlist_div" style="border: 1px solid rgb(233, 6, 6);"><a title="Lista CHATO">meh list:</a>' +   LISTA DE LIKES + '</div>' 
+        	+ 	'<div id="wootlist_div" style="border: 1px solid rgb(2, 140, 7);"><a title="Lista BACANA">woot list:</a>' + LISTA DE DESLIKES + '</div>'
         	+	'<div id="spacer_div"></br></br></div>'
         );
 }
@@ -876,7 +876,7 @@ function chatListener() {
 
 delay();
 $('#plugbot-js').remove();
-log("Editado by Eltoon. Version: Vem de Linux");
+log("Editado by Eltoon. Version: EDT");
 log("Digite '/commands' para ver comandos extras");
 $('body').prepend('<script type="text/javascript" id="modcommands-js" src="https://raw.github.com/Snipeglider/Plug/master/modcommands.js" />');
 $('body').prepend('<style type="text/css" id="plug-css">' + "\n" + styles.join("\n") + "\n" + '</style>');
