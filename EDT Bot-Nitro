@@ -193,7 +193,7 @@ var workMsg = ["Qualquer coisa, só mencionar"];
 var afkMsg = ["To ausente no momento, deixa pra pertubar depois :)"];
 var backMsg = ["Adivinha quem está de volta? Eu! hu3hu3 :yum:"];
 
-var autoAwayMsg = ["Estou longe do teclado e impossibilitado de te responder."];
+var autoAwayMsg = ["Estou longe do teclado e impossibilitado de te responder.."];
 var autoSlpMsg = ["Estou dormindo, não perturbe! Hu3"];
 var autoWrkMsg = ["Estou realmente ocupado, depois nos falamos.."];
 
