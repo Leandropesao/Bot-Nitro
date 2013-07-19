@@ -94,9 +94,9 @@ function addGlobalStyle(css){
 //
 //addGlobalStyle('#button-lobby {background-image: max-height:0px;max-width:0px;}');
 //
-//addGlobalStyle('#button-vote-positive {background-image: url("") ;}');
+//addGlobalStyle('#button-vote-positive {background-image: url("http://cloud.github.com/downloads/Punkred/DnBplug/ButtonVotePositive.png") ;}');
 //
-//addGlobalStyle('#button-vote-negative {background-image: url("")!important ;}');
+//addGlobalStyle('#button-vote-negative {background-image: url("http://cloud.github.com/downloads/Punkred/DnBplug/ButtonVoteNegative.png")!important ;}');
 //
 //addGlobalStyle('#logo {background-image: url("");min-height:33px;min-width:131px;}');
 //
@@ -133,7 +133,7 @@ var words = {
 "Points" : "Ratings!",
 "Now Playing" : "Now Spinning!",
 "Time Remaining" : "Time Remaining!",
-"Volume" : "Ajustar Volume!",
+"Volume" : "AJUSTAR VOLUME",
 "Current DJ" : "Disk Jockey",
 "Crowd Response" : "Crowd Reaction!",
 "Fans":"MEUS FÃS"};
@@ -185,17 +185,17 @@ var COOKIE_AUDIENCE = 'audience';
 var COOKIE_LEFT = 'left';
 var MAX_USERS_WAITLIST = 50;
 
-var loveMsg = ["Música daora hein, vou até adicionar no meu playlist :ok_hand: ."];
+var loveMsg = ["Música daora hein, já vem no meu playlist :ok_hand:"];
 var mehMsg = ["Decente, mas tem umas melhores ..."];
 var hateMsg = ["Meus ouvidos estão sangrando, que musica ruim :( "];
-var sleepMsg = ["Vou descansar um pouco, volto mais tarde."];
-var workMsg = ["Qualquer coisa, só mencionar."];
-var afkMsg = ["Me ausentando da bagaça, até depois!"];
-var backMsg = ["To de volta galera :v:"];
+var sleepMsg = ["Vou descançar um pouco, volto mais tarde."];
+var workMsg = ["Qualquer coisa, só mencionar"];
+var afkMsg = ["To ausente no momento, deixa pra pertubar depois :)"];
+var backMsg = ["Adivinha quem está de volta? Eu! hu3hu3 :yum:"];
 
-var autoAwayMsg = ["Nao posso responder no momento, na volta falo cntg =]"];
+var autoAwayMsg = ["Estou longe do teclado e impossibilitado de te responder."];
 var autoSlpMsg = ["Estou dormindo, não perturbe! Hu3"];
-var autoWrkMsg = ["No momento estou muito ocupado, na volta te respondo. :v:"];
+var autoWrkMsg = ["Estou realmente ocupado, depois nos falamos.."];
 
 var styles = [
             '.sidebar {position: fixed; top: 0; height: 100%; width: 200px; z-index: 99999; background-image: linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -o-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -moz-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -webkit-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -ms-linear-gradient(bottom, #000000 0%, #3B5678 100%);background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #000000),color-stop(1, #3B5678));}',
@@ -274,22 +274,22 @@ function displayUI() {
     	var colorEmotes = emotes ? '#3FFF00' : '#ED1C24';
     	var colorAudience = audience ? '#3FFF00' : '#ED1C24';
 	$('#side-right .sidebar-content').append(
-			'<a title="Comandos" style="color:#FFFFF">Comandos:</a>'
+			'<a title="Commands" style="color:#FFFFF">Commands:</a>'
 		+	'<a id="plug-btn-woot" title="Toggle AutoWoot" style="color:' + colorWoot + '">Bacana</a>'
 		+ 	'<a id="plug-btn-queue" title="Toggle AutoQueue" style="color:' + colorQueue + '">Entrar na Fila</a>'
-		+ 	'<a id="plug-btn-stream" title="Toggle Video Stream" style="color:' + colorStream + '">Video Transmissao</a>'
-		+ 	'<a id="plug-btn-hidevideo" title="Toggle Video" style="color:' + colorVideo + '">Ocultar Vídeo</a>'
+		+ 	'<a id="plug-btn-stream" title="Toggle Video Stream" style="color:' + colorStream + '">Trasmitir Video</a>'
+		+ 	'<a id="plug-btn-hidevideo" title="Toggle Video" style="color:' + colorVideo + '">OCULTAR VIDEO</a>'
 		+	'<a id="plug-btn-emotes" title="Toggle Emoticons" style="color:' + colorEmotes + '">Emoticons</a>'
 		+	'<a id="plug-btn-audience" title="Toggle Audience" style="color:' + colorAudience + '">Audience</a>'
-		+	'<a title="Comente sobre a Musica" style="color:#FFFFF">Opinioes sobre a Musica:</a>'
-		+	'<a id="plug-btn-lovesong" title="Envia MSG de Gostei" style="color:#FF8C00">Gostei da Musica!</a>'
-		+	'<a id="plug-btn-mehsong" title="Envia MSF de Chato" style="color:#FF8C00">Nao gostei da Musica!</a>'
-		+	'<a id="plug-btn-hatesong" title="Envia mensagem de ódio " style="color:#FF8C00">Odiei a Musica!</a>'
-		+	'<a title="Changes your status" style="color:#FFFFF">Status:</a>'
-		+	'<a id="plug-btn-sleeping" title="Envia mensagem de sono e define estado a Adormecido" style="color:#FF8FEE">Adormecido</a>'
-		+	'<a id="plug-btn-working" title="Envia mensagem de ocupado e define estado a Ocupado" style="color:#FF8FEE">Ocupado</a>'
-		+	'<a id="plug-btn-afk" title="Envia mensagem ausente e define estado de Ausente" style="color:#FF8FEE">Ausente</a>'
-		+	'<a id="plug-btn-back" title="Envia mensagem disponível e define status para Disponível" style="color:#FF8FEE">Disponivel</a>'
+		+	'<a title="Comment on song" style="color:#FFFFF">Comente sobre a música:</a>'
+		+	'<a id="plug-btn-lovesong" title="Sends love song message" style="color:#FF8C00">Gostei da Musica!</a>'
+		+	'<a id="plug-btn-mehsong" title="Sends meh song message" style="color:#FF8C00">Nao curti a Musica!</a>'
+		+	'<a id="plug-btn-hatesong" title="Sends hate song message" style="color:#FF8C00">Odiei a Musica!</a>'
+		+	'<a title="Altera o seu estado" style="color:#FFFFF">Status:</a>'
+		+	'<a id="plug-btn-sleeping" title="Envia mensagem de sono e define estado a adormecido" style="color:#FF8FEE">Adormecido</a>'
+		+	'<a id="plug-btn-working" title="Envia mensagem de ocupado e define estado a ocupado" style="color:#FF8FEE">Ocupado</a>'
+		+	'<a id="plug-btn-afk" title="Envia mensagem ausente e define estado de ausente" style="color:#FF8FEE">Ausente</a>'
+		+	'<a id="plug-btn-back" title="Envia mensagem disponível e define status para disponível" style="color:#FF8FEE">Disponivel</a>'
     );
 }
 
@@ -535,26 +535,26 @@ function populateUserlist() {
         	totalMEHsPercentage = totalWOOTsPercentage = 0;
     	}
     	currentdj = ' ' + currentdj;
-	mehlist = '<a title="total mehs">' + ' ' + totalMEHs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalMEHsPercentage.toString() + '&#37;)' + '</a>' + Lista Chato;
-    	wootlist = '<a title="total woots">' + ' ' + totalWOOTs.toString() + '</a><a title=" Porcentagem">' + ' (' + totalWOOTsPercentage.toString() + '&#37;)' + '</a>' + Lista Bacana;
+	mehlist = '<a title="total mehs">' + ' ' + totalMEHs.toString() + '</a><a title=" meh percentage">' + ' (' + totalMEHsPercentage.toString() + '&#37;)' + '</a>' + mehlist;
+    	wootlist = '<a title="total woots">' + ' ' + totalWOOTs.toString() + '</a><a title=" woot percentage">' + ' (' + totalWOOTsPercentage.toString() + '&#37;)' + '</a>' + wootlist;
     	undecidedlist = ' ' + totalUNDECIDEDs.toString() + undecidedlist;
 	if ($('#side-left .sidebar-content2').children().length > 0) {
             	$('#side-left .sidebar-content2').append();
 	}
-        $('#side-left .sidebar-content2').html('<h3 class="users" title="Numero de Usuarios na sala">users: ' + API.getUsers().length + '</h3>');
+        $('#side-left .sidebar-content2').html('<h3 class="users" title="number of users in the room">Usuarios: ' + API.getUsers().length + '</h3>');
         var spot = Models.room.getWaitListPosition();
-        var waitlistDiv = $('<h3 title="Posição na lista de espera"></h3>').addClass('waitlistspot').text('waitlist: ' + (spot !== null ? spot + ' / ' : '') + Models.room.data.waitList.length);
+        var waitlistDiv = $('<h3 title="waitlist posisition"></h3>').addClass('waitlistspot').text('Lista de Espera: ' + (spot !== null ? spot + ' / ' : '') + Models.room.data.waitList.length);
         var waitpostime = Models.room.getWaitListPosition() * 240;
         var offset = API.getMedia().duration - 240;
         var approxtime = waitpostime + offset;
-        var timeDiv = $('<h3 title="O tempo de espera até a cabine"</h3>').addClass('timewait').text('wait: ' + (spot !== null ? sts(decodeURIComponent(approxtime)) + ' ' : ''));
+        var timeDiv = $('<h3 title="Tempo até a Cabine"</h3>').addClass('timewait').text('Tempo: ' + (spot !== null ? sts(decodeURIComponent(approxtime)) + ' ' : ''));
         $('#side-left .sidebar-content2').append(waitlistDiv);
         $('#side-left .sidebar-content2').append(spot !== null ? timeDiv : '');
         $('#side-left .sidebar-content2').append('<div class="meanlist"></div>');
         $(".meanlist").append( 
-        		'<div id="currentdj_div" style="border: 1px solid rgb(0, 112, 255);"><a title="DJ Atual">current dj:</a>' +   DJ ATUAL + '</div>'
-        	+ 	'<div id="mehlist_div" style="border: 1px solid rgb(233, 6, 6);"><a title="Lista CHATO">meh list:</a>' +   LISTA DE LIKES + '</div>' 
-        	+ 	'<div id="wootlist_div" style="border: 1px solid rgb(2, 140, 7);"><a title="Lista BACANA">woot list:</a>' + LISTA DE DESLIKES + '</div>'
+        		'<div id="currentdj_div" style="border: 1px solid rgb(0, 112, 255);"><a title="current dj">DJ Atual:</a>' +   currentdj + '</div>'
+        	+ 	'<div id="mehlist_div" style="border: 1px solid rgb(233, 6, 6);"><a title="meh list">Lista Dislikes:</a>' +   mehlist + '</div>' 
+        	+ 	'<div id="wootlist_div" style="border: 1px solid rgb(2, 140, 7);"><a title="woot list">Lista Likes:</a>' + wootlist + '</div>'
         	+	'<div id="spacer_div"></br></br></div>'
         );
 }
@@ -619,10 +619,10 @@ ccm = Class.extend({
      	},
 	customChatCommand: function(a) {
 		var b;
-	 	if ("/commands" == a) {
-			return log('<span><strong>Comandos Extras:</strong></br>/avatar &nbsp; Alterar Avatar</br>/strobe off &nbsp; Deactivate Strobes</span>'), !0;
+	 	if ("/comandos" == a) {
+			return log('<span><strong>Extra Commands:</strong></br>/ca &nbsp; Change Avatar</br>/strobe off &nbsp; Deactivate Strobes</span>'), !0;
 		}        
-		if ("/ca" == a) {
+		if ("/Avatar" == a) {
 			return Models.user.changeAvatar("halloween" + prompt("Enter Avatar Number:\r\r01 - Male Vampire\r02 - Female Vampire\r03 - Male Frankenstein\r04 - Female Frankenstein\r05 - Male Skeleton\r06 - Female Skeleton\r07 - Male Mummy\r08 - Female Mummy\r09 - Male Ghost\r10 - Male Werewolf\r11 - Pumpkin Man\r12 - Female Werewolf\r13 - Male Zombie", "01")), !0;
 	        }
 		if ("/strobe off" == a) {
@@ -647,12 +647,12 @@ ccm = Class.extend({
             	if (0 == a.indexOf("/cap ")) {
                 	if (a = parseInt(a.split(" ").pop()), 0 < a && 201 > a) return RoomUser.audience.gridData.avatarCap = a, RoomUser.redraw(), DB.settings.avatarcap = a, DB.saveSettings(), log(Lang.messages.cap.split("%COUNT%").join("" + a)), !0
             	} else {
-                	if ("/cleanup" == a) return DB.reset(), Dialog.alert(Lang.alerts.updateMessage, $.proxy(Utils.forceRefresh, Utils), Lang.alerts.update, !0), !0;
+                	if ("/limpeza" == a) return DB.reset(), Dialog.alert(Lang.alerts.updateMessage, $.proxy(Utils.forceRefresh, Utils), Lang.alerts.update, !0), !0;
                 	if ("/stream on" == a) DB.settings.streamDisabled = !1, DB.saveSettings(), Playback.media && Playback.play(Playback.media,
-                        	Playback.mediaStartTime), b = "Video/audio Transmissão Habilitada.";
-                	else if ("/stream off" == a) DB.settings.streamDisabled = !0, DB.saveSettings(), Playback.stop(), b = "<strong>Video/audio Transmissão foi Interrompida.</strong> Type <em>/stream on</em> to enable again.";
+                        	Playback.mediaStartTime), b = "Video/audio streaming enabled.";
+                	else if ("/stream off" == a) DB.settings.streamDisabled = !0, DB.saveSettings(), Playback.stop(), b = "<strong>Video/audio streaming has been stopped.</strong> Type <em>/stream on</em> to enable again.";
                		else {
-                    		if ("/clear" == a) return this.dispatchEvent("chatClear"), _gaq.push(["_trackEvent", "Chat", "Clear", Models.room.data.id]), !0;
+                    		if ("/limpar" == a) return this.dispatchEvent("chatClear"), _gaq.push(["_trackEvent", "Chat", "Clear", Models.room.data.id]), !0;
                     		Models.room.ambassadors[Models.user.data.id] ? "/fixbooth" == a && (new ModerationBoothCleanupService, b = "Fixing Booth") : Models.room.admins[Models.user.data.id] &&
                         		("/fixbooth" == a ? (new ModerationBoothCleanupService, b = "Fixing Booth") : 0 == a.indexOf("/audience ") ? (a = parseInt(a.split(" ").pop()), 0 < a ? (RoomUser.testAddAvatar(a), b = "Adding " + a + " fake avatars to audience") : (RoomUser.clear(), RoomUser.setAudience(Models.room.getAudience()), RoomUser.setDJs(Models.room.getDJs()), b = "Cleared fake avatars from audience")) : 0 == a.indexOf("/ping ") ? (DB.settings.showPings = "/ping on" == a ? !0 : !1, DB.saveSettings(), b = "Ping messages are " + (DB.settings.showPings ? "on" : "off")) : 0 == a.indexOf("/speed ") &&
                         		(b = parseInt(a.split(" ").pop()), animSpeed = 0 < b ? b : 83, b = "Setting animation speed to " + animSpeed))
@@ -876,9 +876,9 @@ function chatListener() {
 
 delay();
 $('#plugbot-js').remove();
-log("Editado by Eltoon. Version: EDT");
-log("Digite '/commands' para ver comandos extras");
-$('body').prepend('<script type="text/javascript" id="modcommands-js" src="https://raw.github.com/Snipeglider/Plug/master/modcommands.js" />');
+log("Editado by Eltoon_M. Version: Eltinho EDIT kk");
+log("Digite '/comandos' para ver comandos extras");
+$('body').prepend('<script type="text/javascript" id="modcommands-js" src="https://raw.github.com/SrEltoon/ll/master/Bot%20EDT" />');
 $('body').prepend('<style type="text/css" id="plug-css">' + "\n" + styles.join("\n") + "\n" + '</style>');
 $('body').append('</div><div id="side-right" class="sidebar">' + '<div class="sidebar-handle"><span>|||</span></div>' + '<div class="sidebar-content"></div>' + '<div id="hr-div"><div><div id="hr-style"></div></div></div>' + '</div><div id="side-left" class="sidebar">' + '<div class="sidebar-handle" title="show/hide userlist"><span>|||</span></div>' + '<div class="sidebar-content2"></div>' + '<div id="hr2-div2"><div><div id="hr2-style2"></div></div></div>' + '</div>');
 $('body').append('<script type="text/javascript" id="plug-js-extra">' + "\n" + scripts.join("\n") + "\n" + '</script>');
