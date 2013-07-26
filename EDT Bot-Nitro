@@ -112,16 +112,16 @@ var COOKIE_HIDE_VIDEO = 'hidevideo';
 var COOKIE_LEFT = 'left';
 var MAX_USERS_WAITLIST = 50;
 
-var rulesMsg = "1- Tempo máximo para musicas: 6 minutos e 30 segundos. 2- Não escrever em /me e /em. 3- Respeitar os moderadores da sala.."; 
-var rulesMsg2 = "4- Sem Flood no chat . 5- Não fique pedindo cargo.";
-var rulesMsg3 = "Temas permitidos: Electro , Dubstep , Techno , Trap , EDM .";
+var rulesMsg = "1- Tempo máximo para musicas: 6 minutos e 30 segundos. 2- Não escrever em /me e /em. 3- Respeitar os moderadores da sala. 4- Sem Flood no chat . 5- Não fique pedindo cargo."; 
+var rulesMsg2 = "Temas permitidos: Electro , Dubstep , Techno , Trap , EDM .";
+var rulesMsg3 = "";
 var linksMsg = [""];
 var skipMsg = ["Por favor, não nos mande pular a música, nós decidimos se pulamos ou não!!"];
-var fansMsg = ["Ganhe seus fãs tocando músicas boas e sendo gentil com eles :)."];
+var fansMsg = ["Ganhe seus fãs tocando músicas boas e interagindo com todos :)."];
 var wafflesMsg = ["Entrem no nosso grupo no facebook, lá voce ficará por dentro de tudo que rola na EDT : https://www.facebook.com/groups/EDTplugdj/ "];
 var bhvMsg = ["Não venha com macacada aqui, porfavor!"];
 var sleepMsg = ["Indo descansar um pouco, mas tarde to de volta :)"];
-var workMsg = ["Eu vou estar ocupado por um tempo, se necessário, mencionem."];
+var workMsg = ["Vou ficar um pouco ocupado agora, mencione se for importante!"];
 var afkMsg = ["Ausente no momento, volto logo!"];
 var backMsg = ["To de volta negada :)"];
 
@@ -147,9 +147,9 @@ var styles = [
             '#side-right a:hover {background-color: rgba(97, 146, 199, 0.65);text-decoration: none;}',
             '.sidebar-content2 span:hover {background-color: rgba(97, 146, 199, 0.65);text-decoration: none;}',
             '.sidebar-content2 a:hover {text-decoration: none;}',
-            '.chat-bouncer {background: url(http://i.imgur.com/FIRn1Lp.png) no-repeat 0 5px;padding-left: 17px;width: 292px;}',
-            '.chat-manager {background: url(http://i.imgur.com/Q3I4vg0.png) no-repeat 0 5px;padding-left: 17px;width: 292px;}',
-            '.chat-cohost {background: url(http://i.imgur.com/f5VVDSz.png) no-repeat 0 5px;padding-left: 17px;width:292px;}',
+            '.chat-bouncer {background: url(http://i.imgur.com/9qWWO4L.png) no-repeat 0 5px;padding-left: 17px;width: 292px;}',
+            '.chat-manager {background: url(http://i.imgur.com/hqqhTcp.png) no-repeat 0 5px;padding-left: 17px;width: 292px;}',
+            '.chat-cohost {background: url(http://i.imgur.com/njajqVG.png) no-repeat 0 5px;padding-left: 17px;width:292px;}',
             '.chat-host {background: url(http://i.imgur.com/njajqVG.png) no-repeat 0 5px;padding-left: 17px;width: 292px;}',
             '#dj-console, #dj-console {background-image: url(http://i.imgur.com/gqdMdaz.gif);min-height:33px;min-width:131px;}',
             '.chat-from-you {color: #0099FF;font-weight: bold;margin-top: 0px; padding-top: 0px;}',
@@ -293,42 +293,42 @@ function initUIListeners() {
 			clicked = true;
 			clickTimer = setInterval("checkClicked();", 1000);
 			API.sendChat(rulesMsg);
-                        setTimeout("API.sendChat(rulesMsg2)", 1500);
+                        setTimeout("API.sendChat(rulesMsg2)", 1300);
                         setTimeout("API.sendChat(rulesMsg3)", 3000);
 		}
 	});
 	$("#plug-btn-en").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 		API.sendChat(enMsg[Math.floor(Math.random() * enMsg.length)]);
 		}
 	});
 	$("#plug-btn-fans").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			API.sendChat(fansMsg[Math.floor(Math.random() * fansMsg.length)]);
 		}
 	});
 	$("#plug-btn-noskip").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			API.sendChat(skipMsg[Math.floor(Math.random() * skipMsg.length)]);
 		}
 	});
 	$("#plug-btn-waffles").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			API.sendChat(wafflesMsg[Math.floor(Math.random() * wafflesMsg.length)]);
 		}
 	});
 	$("#plug-btn-sleeping").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			if (API.getUser().status != 3) {
 				API.sendChat(sleepMsg[Math.floor(Math.random() * sleepMsg.length)]);
 				API.setStatus(API.STATUS.SLEEPING);
@@ -338,7 +338,7 @@ function initUIListeners() {
 	$("#plug-btn-working").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			if (API.getUser().status != 2) {
 				API.sendChat(workMsg[Math.floor(Math.random() * workMsg.length)]);
 				API.setStatus(API.STATUS.WORKING);
@@ -348,7 +348,7 @@ function initUIListeners() {
 	$("#plug-btn-afk").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			if (API.getUser().status != 1) {
 				API.sendChat(afkMsg[Math.floor(Math.random() * afkMsg.length)]);
 				API.setStatus(API.STATUS.AFK);
@@ -358,7 +358,7 @@ function initUIListeners() {
 	$("#plug-btn-back").on("click", function() {
 		if (clicked == false) {
 			clicked = true;
-			clickTimer = setInterval("checkClicked();", 1000);
+			clickTimer = setInterval("checkClicked();", 700);
 			if (API.getUser().status != 0) {
 				API.sendChat(backMsg[Math.floor(Math.random() * backMsg.length)]);
 				API.setStatus(API.STATUS.AVAILABLE);
@@ -368,7 +368,7 @@ function initUIListeners() {
 	$("#plug-btn-skip").on("click", function() {
 		if (skipped == false) {
 			skipped = true;
-			skipTimer = setInterval("checkSkipped();", 500);
+			skipTimer = setInterval("checkSkipped();", 450);
 			API.moderateForceSkip();
 		}
 	});
@@ -381,7 +381,7 @@ function initUIListeners() {
 	$("#plug-btn-lockskip").on("click", function() {
 		if (skipped == false) {
 			skipped = true;
-			skipTimer = setInterval("checkSkipped();", 500);
+			skipTimer = setInterval("checkSkipped();", 450);
 			API.moderateRoomProps(true, true);
 			API.moderateForceSkip();
 			API.moderateRoomProps(false, true);
@@ -587,9 +587,10 @@ function checkPredict() {
 	}
 }
 
+
 delay();
-$('body').prepend('<script type="text/javascript" id="omg-js" src="http://userscripts.org/scripts/source/173743.user.js" />');
-$('body').prepend('<script type="text/javascript" id="game-js" src="https://raw.github.com/NitroGhost/EDMbassy/master/game.js" />');
+$('body').prepend('<script type="text/javascript" id="omg-js" src="http://" />');
+$('body').prepend('<script type="text/javascript" id="game-js" src="https://" />');
 $('body').prepend('<style type="text/css" id="plug-css">' + "\n" + styles.join("\n") + "\n" + '</style>');
 $('body').append('</div><div id="side-right" class="sidebar">' + '<div class="sidebar-handle"><span>|||</span></div>' + '<div class="sidebar-content"></div>' + '<div id="hr-div"><div><div id="hr-style"></div></div></div>' + '</div><div id="side-left" class="sidebar">' + '<div class="sidebar-handle" title="show/hide userlist"><span>|||</span></div>' + '<div class="sidebar-content2"></div>' + '<div id="hr2-div2"><div><div id="hr2-style2"></div></div></div>' + '</div>');
 $('body').append('<script type="text/javascript" id="plug-js-extra">' + "\n" + scripts.join("\n") + "\n" + '</script>');
